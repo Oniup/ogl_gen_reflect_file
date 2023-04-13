@@ -53,6 +53,7 @@ The application has multiple commands and is defined by adding a ``` - ``` befor
 all the file locations. Node that you can add multiple commands:
 
 ### -g
+
 reads the defined files and generates the reflection files
 
 ```
