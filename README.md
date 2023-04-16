@@ -52,6 +52,10 @@ struct Player {
 The application has multiple commands and is defined by adding a ``` - ``` before 
 all the file locations. Node that you can add multiple commands:
 
+### -d
+
+enables debug output to the console
+
 ### -g
 
 reads the defined files and generates the reflection files
@@ -87,11 +91,5 @@ example of using all the commands:
 
 ```
 ogl_gen_reflection_file 
--g
-../role_ball_game/src/player.hpp role_ball_game/src/enemy.hpp 
-../role_ball_game/reflection_definitions/reflection_definitions.hpp
--cd
-../role_ball_game/reflection_definitions
--b
-../role_ball_game/bin
+-d -g ../role_ball_game/src/player.hpp role_ball_game/src/enemy.hpp  ../role_ball_game/reflection_definitions/reflection_definitions.hpp -cd ../role_ball_game/reflection_definitions -b ../role_ball_game/bin
 ```

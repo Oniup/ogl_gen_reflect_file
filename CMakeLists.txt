@@ -5,6 +5,7 @@ add_executable(
     ogl_gen_reflection_file
     
     src/reflection_parser.hpp
+    src/reflection_parser.cpp
     src/command_input.hpp
     src/command_input.cpp
 
