@@ -2,7 +2,8 @@
 #include <vector>
 
 #include "command_input.hpp"
-#include "reflection_parser.hpp"
+#include "parser.hpp"
+#include "gen_reflection_file.hpp"
 
 int main(int argc, char** argv) {
     std::vector<const char*> args(argc);
@@ -21,15 +22,18 @@ int main(int argc, char** argv) {
         return -2;
     }
 
-    ReflectionParser* reflection_parser = new ReflectionParser{};
-    reflection_parser = parse_reflection_files(reflection_parser, input_args);
-    if (reflection_parser == nullptr) {
+    ParserHandler* parser_handler = new ParserHandler{};
+    GenReflection* gen_reflection = new GenReflection{};
+    parser_handler->gen_reflection_handler = gen_reflection;
+    parser_handler = parse_reflection_files(parser_handler, input_args);
+    if (parser_handler == nullptr) {
         delete input_args;
         return -3;
     }
 
     delete input_args;
-    delete reflection_parser;
+    delete parser_handler;
+    delete gen_reflection;
 
     return 0;
 }

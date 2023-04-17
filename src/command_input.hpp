@@ -7,7 +7,6 @@
 #include <string>
 
 typedef int CommandArgs;
-typedef int ErrorNumber;
 
 enum CommandArgs_ {
     CommandArgs_None                    = 0x000,

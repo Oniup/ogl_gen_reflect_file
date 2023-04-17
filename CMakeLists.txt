@@ -4,10 +4,11 @@ project(ogl_gen_reflection_file)
 add_executable(
     ogl_gen_reflection_file
     
-    src/reflection_parser.hpp
-    src/reflection_parser.cpp
     src/command_input.hpp
     src/command_input.cpp
+    src/parser.hpp
+    src/parser.cpp
+    src/gen_reflection_file.hpp
 
     src/main.cpp
 )
